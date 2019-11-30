@@ -62,9 +62,8 @@
         <Label fx:id="tag_price" layoutX="11.0" layoutY="279.0" text="Tag Price" />
         <TextField fx:id="manufacture_date_field" layoutX="127.0" layoutY="308.0" />
         <Label fx:id="manufacture_date" layoutX="11.0" layoutY="312.0" text="Manufacture Date" />
-        <Button fx:id="new_vehicle" layoutX="19.0" layoutY="354.0" mnemonicParsing="false" onAction="#newVehicle" text="Submit" />
-        <Button fx:id="update_vehicle" layoutX="121.0" layoutY="354.0" mnemonicParsing="false" onAction="#updateVehicle" text="Update" />
-        <Button fx:id="clear_vehicle" layoutX="221.0" layoutY="354.0" mnemonicParsing="false" onAction="#clearVehicle" text="Clear" />
+        <Button fx:id="new_vehicle" layoutX="69.0" layoutY="354.0" mnemonicParsing="false" onAction="#newVehicle" text="Submit" />
+        <Button fx:id="clear_vehicle" layoutX="189.0" layoutY="354.0" mnemonicParsing="false" onAction="#clearVehicle" text="Clear" />
 
         <Line endY="-95.0" layoutX="301.0" layoutY="132.0" startY="250.0" />
 
@@ -76,8 +75,7 @@
         <TextField fx:id="inventory_date_field" layoutX="427.0" layoutY="188.0" />
         <Label fx:id="is_sold" layoutX="322.0" layoutY="231.0" text="Is Sold?" />
         <TextField fx:id="is_sold_field" layoutX="427.0" layoutY="227.0" />
-        <Button fx:id="inventory_assign" layoutX="346.0" layoutY="284.0" mnemonicParsing="false" onAction="#assignVehicle" text="Assign" />
-        <Button fx:id="clear_assign" layoutX="511.0" layoutY="284.0" mnemonicParsing="false" onAction="#clearAssign" text="Clear" />
-        <Button fx:id="uodate_assign" layoutX="429.0" layoutY="284.0" mnemonicParsing="false" onAction="#updateAssign" text="Update" />
+        <Button fx:id="inventory_assign" layoutX="376.0" layoutY="284.0" mnemonicParsing="false" onAction="#assignVehicle" text="Assign" />
+        <Button fx:id="clear_assign" layoutX="480.0" layoutY="284.0" mnemonicParsing="false" onAction="#clearAssign" text="Clear" />
     </children>
 </AnchorPane>

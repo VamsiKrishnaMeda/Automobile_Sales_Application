@@ -62,10 +62,6 @@ public class ProductionOfficeController {
         }
     }
 
-    public void updateVehicle(ActionEvent actionEvent) {
-
-    }
-
     public void clearVehicle(ActionEvent actionEvent) {
         vin_field.clear();
         model_name_field.clear();
@@ -95,10 +91,6 @@ public class ProductionOfficeController {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    public void updateAssign(ActionEvent actionEvent) {
-
     }
 
     public void clearAssign(ActionEvent actionEvent) {
