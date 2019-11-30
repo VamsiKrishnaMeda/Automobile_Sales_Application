@@ -7,19 +7,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import sample.Main;
+import sample.util.DBUtil;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class RootLayoutController {
 
     @FXML
     private BorderPane rootLayout;
-    private AnchorPane productionOfficeView;
 
     public void handleProductionOffice(ActionEvent actionEvent) throws IOException {
         try {
-            productionOfficeView = FXMLLoader.load(Main.class.getResource("view/ProductionOffice.fxml"));
-            rootLayout.setCenter(productionOfficeView);
+            AnchorPane productionOfficeInterface = FXMLLoader.load(Main.class.getResource("view/ProductionOffice.fxml"));
+            rootLayout.setCenter(productionOfficeInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -27,8 +28,8 @@ public class RootLayoutController {
 
     public void handleCustomer(ActionEvent actionEvent) {
         try {
-            AnchorPane customerView = FXMLLoader.load(Main.class.getResource("view/Customer.fxml"));
-            rootLayout.setCenter(customerView);
+            AnchorPane customerInterface = FXMLLoader.load(Main.class.getResource("view/Customer.fxml"));
+            rootLayout.setCenter(customerInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -45,8 +46,8 @@ public class RootLayoutController {
 
     public void handleMarketingOffice(ActionEvent actionEvent) {
         try {
-            AnchorPane marketingOfficeView = FXMLLoader.load(Main.class.getResource("view/MarketingOffice.fxml"));
-            rootLayout.setCenter(marketingOfficeView);
+            AnchorPane marketingOfficeInterface = FXMLLoader.load(Main.class.getResource("view/MarketingOffice.fxml"));
+            rootLayout.setCenter(marketingOfficeInterface);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -64,6 +65,11 @@ public class RootLayoutController {
     }
 
     public void handleClose(ActionEvent actionEvent) {
+        try {
+            DBUtil.dbDisconnect();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         System.exit(0);
     }
 
