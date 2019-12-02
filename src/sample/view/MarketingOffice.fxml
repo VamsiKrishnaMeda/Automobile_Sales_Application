@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-
-
 <AnchorPane fx:id="marketingOfficeInterface" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MarketingOfficeController">
-   <children>
-      <Label layoutX="286.0" layoutY="192.0" text="Marketing Office" />
-   </children>
+    <children>
+        <Label layoutX="231.0" layoutY="23.0" text="Marketing Office Interface"/>
+        <Button layoutX="29.0" layoutY="75.0" mnemonicParsing="false" onAction="#queryTwo" text="Show Sales Trend"/>
+        <Button layoutX="29.0" layoutY="125.0" mnemonicParsing="false" onAction="#queryThree" text="Top Brand by $"/>
+        <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" onAction="#queryFour" text="Top Dealer by $"/>
+        <Button layoutX="29.0" layoutY="231.0" mnemonicParsing="false" onAction="#queryFive" text="Top Brand by Units"/>
+        <Button layoutX="29.0" layoutY="282.0" mnemonicParsing="false" onAction="#querySix"
+                text="Best Month for Convertibles"/>
+        <Button layoutX="29.0" layoutY="336.0" mnemonicParsing="false" onAction="#querySeven"
+                text="Dealer wit Longest Avg Time"/>
+        <TextArea fx:id="result_console" layoutX="225.0" layoutY="89.0" prefHeight="285.0" prefWidth="359.0"/>
+        <Label layoutX="365.0" layoutY="67.0" text="Result Console"/>
+    </children>
 </AnchorPane>

@@ -4,10 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import sample.util.DBUtil;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
 public class ProductionOfficeController {
 
@@ -53,7 +55,8 @@ public class ProductionOfficeController {
                 statement.setString(6, engine_field.getText());
                 statement.setString(7, transmission_field.getText());
                 statement.setInt(8, Integer.parseInt(tag_price_field.getText()));
-                statement.setDate(9, Date(new SimpleDateFormat("DD-MMM-YYYY", Locale.US).parse(manufacture_date_field.getText()).getTime()));
+                //  statement.setDate(9, Date(new SimpleDateFormat("DD-MMM-YYYY", Locale.US).parse(manufacture_date_field.getText()).getTime()));
+                statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -82,7 +85,7 @@ public class ProductionOfficeController {
                 PreparedStatement statement = connection.prepareStatement("INSERT INTO Vehicle VALUES (?, ?, ?, ?)");
                 statement.setInt(1, Integer.parseInt(inventory_dealer_id_field.getText()));
                 statement.setString(2, inventory_vin_field.getText());
-                statement.setDate(3, new SimpleDateFormat("DD-MMM-YYYY", Locale.US).parse(inventory_date_field.getText()).getTime()));
+                //     statement.setDate(3, new SimpleDateFormat("DD-MMM-YYYY", Locale.US).parse(inventory_date_field.getText()).getTime()));
                 statement.setString(4, is_sold_field.getText());
                 statement.executeUpdate();
             } catch (SQLException e) {
