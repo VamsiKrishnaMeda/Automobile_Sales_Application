@@ -57,7 +57,7 @@
         <Label fx:id="transmission" layoutX="11.0" layoutY="247.0" text="Transmission" />
         <TextField fx:id="tag_price_field" layoutX="127.0" layoutY="275.0" />
         <Label fx:id="tag_price" layoutX="11.0" layoutY="279.0" text="Tag Price" />
-        <TextField fx:id="manufacture_date_field" layoutX="127.0" layoutY="308.0" />
+        <TextField fx:id="manufacture_date_field" layoutX="127.0" layoutY="308.0" promptText="YYYY-MM-DD"/>
         <Label fx:id="manufacture_date" layoutX="11.0" layoutY="312.0" text="Manufacture Date" />
         <Button fx:id="new_vehicle" layoutX="69.0" layoutY="354.0" mnemonicParsing="false" onAction="#newVehicle" text="Submit" />
         <Button fx:id="clear_vehicle" layoutX="189.0" layoutY="354.0" mnemonicParsing="false" onAction="#clearVehicle" text="Clear" />
@@ -69,7 +69,7 @@
         <Label fx:id="inventory_vin" layoutX="322.0" layoutY="153.0" text="VIN" />
         <TextField fx:id="inventory_vin_field" layoutX="427.0" layoutY="149.0" />
         <Label fx:id="inventory_date" layoutX="322.0" layoutY="192.0" text="Inventory Date" />
-        <TextField fx:id="inventory_date_field" layoutX="427.0" layoutY="188.0" />
+        <TextField fx:id="inventory_date_field" layoutX="427.0" layoutY="188.0" promptText="YYYY-MM-DD"/>
         <Label fx:id="is_sold" layoutX="322.0" layoutY="231.0" text="Is Sold?" />
         <TextField fx:id="is_sold_field" layoutX="427.0" layoutY="227.0" />
         <Button fx:id="inventory_assign" layoutX="376.0" layoutY="284.0" mnemonicParsing="false" onAction="#assignVehicle" text="Assign" />

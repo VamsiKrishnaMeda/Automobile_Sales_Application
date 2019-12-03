@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
 <AnchorPane fx:id="dealerInterface" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.DealerController">
    <children>
-      <Label layoutX="286.0" layoutY="192.0" text="Dealer" />
+       <GridPane alignment="top_left" hgap="10" vgap="10">
+           <padding>
+               <Insets top="25" right="25" bottom="10" left="25"/>
+           </padding>
+
+           <Text text="Dealer Sales Interface"
+                 GridPane.columnIndex="0" GridPane.rowIndex="0"
+                 GridPane.columnSpan="2"/>
+
+           <Label text="Dealer ID:"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+           <TextField fx:id="dealer_name"
+                      GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+           <Label text="Customer ID:"
+                  GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+           <TextField fx:id="cust_id"
+                      GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+           <Label text="Vehicle VIN:"
+                  GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+           <TextField fx:id="vehicle_vin"
+                      GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+           <Label text="Sale Price:"
+                  GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+           <TextField fx:id="sale_price"
+                      GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+           <Label text="Sale Date:"
+                  GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+           <TextField fx:id="sale_date"
+                      GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+           <Button fx:id="btn_EnterRecord" prefWidth="90" onAction="#EnterNewSale"
+                   GridPane.columnIndex="0" GridPane.rowIndex="6" text="Enter Sale"/>
+
+           <Label fx:id="report_text"
+                  GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+       </GridPane>
    </children>
 </AnchorPane>

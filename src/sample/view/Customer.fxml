@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane fx:id="customerInterface" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CustomerController">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="sample.controller.CustomerController">
    <children>
-      <Label layoutX="272.0" layoutY="159.0" text="Customer" />
+       <GridPane alignment="center" hgap="10" vgap="10">
+           <padding>
+               <Insets top="25" right="25" bottom="10" left="25"/>
+           </padding>
+
+           <GridPane GridPane.rowIndex="0" alignment="top_left" hgap="10" vgap="10">
+
+               <Text text="Welcome Customer"
+                     GridPane.columnIndex="0" GridPane.rowIndex="0"
+                     GridPane.columnSpan="2"/>
+
+               <Button fx:id="btn_Search" prefWidth="90" onAction="#searchVehicles"
+                       GridPane.columnIndex="4" GridPane.rowIndex="2" text="Search"/>
+
+               <Button fx:id="btn_Clear" prefWidth="90" onAction="#clearVehicles"
+                       GridPane.columnIndex="4" GridPane.rowIndex="3" text="Clear"/>
+
+               <Label text="Model:"
+                      GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+               <TextField fx:id="model_name"
+                          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+               <Label text="Year:"
+                      GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+               <TextField fx:id="year"
+                          GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+               <Label text="Body Style:"
+                      GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+               <TextField fx:id="body_style"
+                          GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+               <Label text="Body Color:"
+                      GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+
+               <TextField fx:id="body_color"
+                          GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+
+               <Label text="Min. Price:"
+                      GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+               <TextField fx:id="min_price"
+                          GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+               <Label text="Max. Price:"
+                      GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+               <TextField fx:id="max_price"
+                          GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+           </GridPane>
+
+           <TableView fx:id="vehicle_date_table"
+                      GridPane.rowIndex="1" prefHeight="205" minHeight="205" maxHeight="205"
+                      minWidth="550" maxWidth="550" prefWidth="550">
+
+           </TableView>
+       </GridPane>
    </children>
 </AnchorPane>
