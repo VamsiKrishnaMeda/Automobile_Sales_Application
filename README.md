@@ -1,6 +1,6 @@
 # Automobile Sales Application
 
-This application is part CSC550 Database Management System course at Northern Kentucky University.
+This application is part of CSC550 Database Management System course at Northern Kentucky University.
 
 **Application Description**
 
